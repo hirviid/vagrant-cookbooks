@@ -1,0 +1,19 @@
+[color]
+	ui = true
+[alias]
+	ch = checkout
+	br = branch
+	co = commit
+	st = status -sb
+	cl = clone
+	last = log -1 HEAD
+	amend = commit --amend -C HEAD
+	undo = reset --soft HEAD^
+	ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short
+	standup = log --since '1 day ago' --oneline --author <%= @user_email %>
+	graph = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+[core]
+	excludesfile = ~/.gitignore
+[user]
+    name = <%= @user_name %>
+    email = <%= @user_email %>

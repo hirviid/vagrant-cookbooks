@@ -1,0 +1,20 @@
+zend_extension=<%= %x[find /usr/lib/php5 -name 'xdebug.so' 2> /dev/null] %>
+xdebug.default_enable=1
+xdebug.remote_autostart=0
+
+xdebug.remote_enable = 1
+xdebug.remote_connect_back = 1
+xdebug.remote_port = 9000
+xdebug.remote_handler = "dbgp"
+xdebug.idekey = "vagrant"
+
+xdebug.profiler_enable = 0
+xdebug.profiler_enable_trigger = 1
+xdebug.max_nesting_level = 200
+xdebug.remote_log="/var/log/xdebug/xdebug.log"
+<!-- xdebug.default_enable=1
+xdebug.remote_enable=1
+xdebug.remote_handler=dbgp
+xdebug.remote_host=33.33.33.1
+xdebug.remote_port=9000
+xdebug.remote_autostart=0 -->
