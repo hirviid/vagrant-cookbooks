@@ -79,7 +79,7 @@ node[:app][:web_apps].each do |name, site|
     server_aliases site[:server_aliases]
     docroot site[:guest_docroot]
     php_timezone site[:php_timezone]
-    apache_alias site[:alias]
+    apache_alias site[:alias]?site[:alias]:false
   end
 
 end

@@ -11,7 +11,9 @@
   RewriteLog <%= node[:apache][:log_dir] %>/<%= @application_name %>-rewrite.log
   RewriteLogLevel 0
 
+  <% if @params[:apache_alias] %>
   Alias <%= @params[:apache_alias][:fakename] %> <%= @params[:apache_alias][:realname] %>
+  <% end %>
 
   php_value date.timezone <%= @params[:php_timezone] %>
 
